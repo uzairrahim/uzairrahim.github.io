@@ -1,0 +1,288 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:700,400,300);
+
+*{ margin: 0; padding: 0; font-family: sans-serif; font-size: 14px; font-weight: normal; color: #222222; cursor: default; }
+*::selection { background: #cfecf0; }
+html, body{ width: 100%; height: 100%; background-color: #3d3d3d; }
+table { border-collapse: collapse; border-spacing: 0; }
+ol, ul{ list-style: none; list-style-type: none; }
+textarea, input, button, select { outline: none; }
+img{ border: 0; }
+b{ font-size: inherit; font-weight: bold; color: inherit; }
+a{ cursor: pointer; }
+
+button{
+	display: block;
+	float: left;
+	padding: 8px 16px;
+	font-family: "Roboto Slab", sans-serif;
+	font-size: 18px;
+	text-align: center;
+	background-color: white;
+	border: 1px solid #dddddd;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+button.pink{
+	color: #ffffff;
+	background-color: #FF0033;
+}
+
+button.pink:hover{
+	background-color: #FF4444;
+}
+
+div.wrapper{
+	display: block;
+	width: calc(100% - 60px);
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+header{
+	position: fixed;
+	display: block;
+	float: left;
+	clear: both;
+	width: 100%;
+	height: 50px;
+	z-index: 1;
+}
+
+main{
+	position: relative;
+	display: block;
+	float: left;
+	clear: both;
+	width: 100%;
+	height: 100%;
+}
+
+	section{
+		position: relative;
+		display: block;
+		float: left;
+		clear: both;
+		width: 100%;
+		background-color: #f5f5f5;
+		background-image: url("../img/bg.png")
+	}
+
+	section.cover{
+		height: 100%;
+		background-position: center;
+		background-size: cover;
+		background-attachment: scroll;
+		background-image: url("../img/img.jpg");
+	}
+
+		section.cover div.wrapper{
+			position: absolute;
+			right: 0;
+			left: 0;
+			top: 100px;
+		}
+
+		section.cover div.photo{
+			display: block;
+			float: left;
+			width: 150px;
+			height: 150px;
+			overflow: hidden;
+		}
+
+			section.cover div.photo img{
+				width: 100%;
+				height: 100%;
+			}
+
+		section.cover div.info{
+			display: block;
+			float: left;
+			width: calc(100% - 150px);
+		}
+
+			section.cover div.info h1{
+				float: left;
+				clear: both;
+				margin: 35px 0 0 20px;
+				color: #222222;
+				font-family: "Roboto Slab", sans-serif;
+				font-size: 24px;
+				font-weight: 400;
+			}
+
+			section.cover div.info p{
+				float: left;
+				clear: both;
+				max-width: 450px;
+				margin: 0 0 0 20px;
+				color: #444444;
+				font-family: "Roboto Slab", sans-serif;
+				font-size: 18px;
+				font-weight: 300;
+			}
+
+		@media screen and (max-width: 699px){
+
+			section.cover div.wrapper{
+				top: 60px;
+			}
+
+			section.cover div.photo{
+				float: none;
+				clear: both;
+				margin: 0 auto;
+				width: 120px;
+				height: 120px;
+			}
+
+			section.cover div.info{
+				width: calc(100% - 30px);
+				margin: 10px 15px;
+			}
+
+				section.cover div.info h1{
+					width: 100%;
+					text-align: center;
+					margin: 0;
+					font-size: 22px;
+				}
+
+				section.cover div.info p{
+					width: 100%;
+					max-width: 100%;
+					text-align: center;
+					margin: 0;
+					font-size: 16px;
+				}
+		}
+
+		@media screen and (max-width: 499px){
+
+			section.cover div.wrapper{
+				top: 20px;
+			}
+
+			section.cover div.info h1{
+				font-size: 18px;
+			}
+
+			section.cover div.info p{
+				font-size: 14px;
+			}
+
+		}
+
+		section.non-cover{
+			padding: 0 0 30px 0;
+		}
+
+			section.non-cover h1,
+			section.non-cover h2{
+				clear: both;
+				width: 100%;
+				color: #1d1d1d;
+				font-size: 28px;
+				margin: 20px 0 0 0;
+				font-family: "Roboto Slab", sans-serif;
+				font-weight: 700;
+			}
+
+			section.non-cover h2{
+				font-size: 18px;
+			}
+
+			section.non-cover h2.margin-top{
+				margin-top: 5px;
+			}
+
+			section.non-cover p{
+				width: 100%;
+				color: #222222;
+				line-height: 30px;
+				font-size: 18px;
+				font-family: "Roboto Slab", sans-serif;
+				font-weight: 300;
+			}
+
+				section.non-cover span{
+					color: inherit;
+					font-size: inherit;
+					font-weight: inherit;
+					font-family: inherit;
+					border-bottom: 1px dotted #444444;
+					
+				}
+
+				section.non-cover span.small{
+					display: block;
+					color: #888888;
+					font-size: 14px;
+					border-bottom: none;
+				}
+
+			section.non-cover ul{
+				display: block;
+				float: left;
+				width: 33%;
+				margin: 10px 0;
+			}
+
+			@media screen and (max-width: 899px){
+				section.non-cover ul{
+					width: 100%;
+					clear: both;
+					margin: 0;
+				}
+
+				section.non-cover ul:first-of-type{
+					margin-top: 10px;
+				}
+			}
+
+				section.non-cover ul li{
+					line-height: 24px;
+					font-size: 16px;
+					font-family: "Roboto Slab", sans-serif;
+					font-weight: 400;
+					list-style-type: disc;
+					list-style-position: inside;
+					text-indent: 20px;
+				}
+
+				section.non-cover ul li.light{
+					color: #888888;
+					font-weight: 300;
+				}
+
+				section.non-cover ul li.sub{
+					list-style-type: circle;
+					text-indent: 40px;
+					font-weight: 300;
+				}
+
+	button.download{
+		float: none;
+		margin: 40px auto 0 auto;
+	}
+
+	@media screen and (max-width: 699px){
+		button{
+			padding: 6px 12px;
+			font-size: 16px;
+		}
+	}
+
+	section.footer{
+		height: 200px;
+		background-color: #3d3d3d;
+		box-shadow: inset 0 4px 8px -4px rgba(0,0,0,0.35);
+	}
+
+		div.fb-actions{
+			display: block;
+			float: right;
+			clear: both;
+			margin: 20px 0;
+		}
